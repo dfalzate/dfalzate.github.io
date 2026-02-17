@@ -64,6 +64,394 @@
             50% { opacity: 0.7; }
         }
 
+        /* Particles Background */
+        .particles-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(99, 102, 241, 0.4);
+            border-radius: 50%;
+            animation: float-particle linear infinite;
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+        }
+
+        .particle:nth-child(1) { left: 10%; animation-duration: 25s; animation-delay: 0s; }
+        .particle:nth-child(2) { left: 20%; animation-duration: 30s; animation-delay: -5s; }
+        .particle:nth-child(3) { left: 30%; animation-duration: 28s; animation-delay: -10s; }
+        .particle:nth-child(4) { left: 40%; animation-duration: 35s; animation-delay: -15s; }
+        .particle:nth-child(5) { left: 50%; animation-duration: 22s; animation-delay: -8s; }
+        .particle:nth-child(6) { left: 60%; animation-duration: 32s; animation-delay: -12s; }
+        .particle:nth-child(7) { left: 70%; animation-duration: 27s; animation-delay: -3s; }
+        .particle:nth-child(8) { left: 80%; animation-duration: 33s; animation-delay: -18s; }
+        .particle:nth-child(9) { left: 90%; animation-duration: 29s; animation-delay: -7s; }
+        .particle:nth-child(10) { left: 15%; animation-duration: 26s; animation-delay: -14s; }
+        .particle:nth-child(11) { left: 25%; animation-duration: 31s; animation-delay: -6s; }
+        .particle:nth-child(12) { left: 35%; animation-duration: 24s; animation-delay: -20s; }
+        .particle:nth-child(13) { left: 45%; animation-duration: 34s; animation-delay: -11s; }
+        .particle:nth-child(14) { left: 55%; animation-duration: 21s; animation-delay: -16s; }
+        .particle:nth-child(15) { left: 65%; animation-duration: 36s; animation-delay: -4s; }
+        .particle:nth-child(16) { left: 75%; animation-duration: 23s; animation-delay: -9s; }
+        .particle:nth-child(17) { left: 85%; animation-duration: 30s; animation-delay: -13s; }
+        .particle:nth-child(18) { left: 5%; animation-duration: 28s; animation-delay: -17s; }
+        .particle:nth-child(19) { left: 95%; animation-duration: 25s; animation-delay: -2s; }
+        .particle:nth-child(20) { left: 50%; animation-duration: 32s; animation-delay: -19s; }
+
+        .particle:nth-child(odd) {
+            background: rgba(236, 72, 153, 0.3);
+            box-shadow: 0 0 10px rgba(236, 72, 153, 0.4);
+        }
+
+        .particle:nth-child(3n) {
+            width: 6px;
+            height: 6px;
+            background: rgba(99, 102, 241, 0.5);
+        }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(110vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Constellation Lines */
+        .constellation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        .constellation-line {
+            position: absolute;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.2), transparent);
+            transform-origin: left center;
+            animation: pulse-line 4s ease-in-out infinite;
+        }
+
+        .constellation-line:nth-child(1) {
+            width: 200px;
+            top: 20%;
+            left: 10%;
+            transform: rotate(15deg);
+            animation-delay: 0s;
+        }
+
+        .constellation-line:nth-child(2) {
+            width: 150px;
+            top: 40%;
+            left: 70%;
+            transform: rotate(-20deg);
+            animation-delay: 0.5s;
+        }
+
+        .constellation-line:nth-child(3) {
+            width: 180px;
+            top: 60%;
+            left: 30%;
+            transform: rotate(10deg);
+            animation-delay: 1s;
+        }
+
+        .constellation-line:nth-child(4) {
+            width: 120px;
+            top: 80%;
+            left: 60%;
+            transform: rotate(-30deg);
+            animation-delay: 1.5s;
+        }
+
+        .constellation-line:nth-child(5) {
+            width: 220px;
+            top: 30%;
+            left: 50%;
+            transform: rotate(25deg);
+            animation-delay: 2s;
+        }
+
+        .constellation-line:nth-child(6) {
+            width: 160px;
+            top: 70%;
+            left: 15%;
+            transform: rotate(-10deg);
+            animation-delay: 2.5s;
+        }
+
+        @keyframes pulse-line {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scaleX(1) rotate(var(--rotation, 0deg));
+            }
+            50% {
+                opacity: 0.8;
+                transform: scaleX(1.1) rotate(var(--rotation, 0deg));
+            }
+        }
+
+        /* Grid Animation */
+        .grid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+            background-image:
+                linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: grid-move 20s linear infinite;
+        }
+
+        @keyframes grid-move {
+            0% {
+                transform: perspective(500px) rotateX(60deg) translateY(0);
+            }
+            100% {
+                transform: perspective(500px) rotateX(60deg) translateY(60px);
+            }
+        }
+
+        /* Wave Effect */
+        .wave-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            z-index: -2;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='rgba(99, 102, 241, 0.1)' d='M0,160L48,170.7C96,181,192,203,288,186.7C384,171,480,117,576,101.3C672,85,768,107,864,128C960,149,1056,171,1152,165.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") repeat-x;
+            animation: wave-move 10s linear infinite;
+            opacity: 0.5;
+        }
+
+        .wave:nth-child(2) {
+            animation-delay: -5s;
+            animation-duration: 8s;
+            opacity: 0.3;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='rgba(236, 72, 153, 0.1)' d='M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,218.7C672,235,768,245,864,234.7C960,224,1056,192,1152,181.3C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") repeat-x;
+        }
+
+        @keyframes wave-move {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Glow Orbs */
+        .glow-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            z-index: -3;
+            animation: orb-float 15s ease-in-out infinite;
+        }
+
+        .glow-orb-1 {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            top: 10%;
+            left: -100px;
+            animation-delay: 0s;
+        }
+
+        .glow-orb-2 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            top: 50%;
+            right: -50px;
+            animation-delay: -5s;
+        }
+
+        .glow-orb-3 {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            bottom: 20%;
+            left: 30%;
+            animation-delay: -10s;
+        }
+
+        @keyframes orb-float {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            25% {
+                transform: translate(30px, -30px) scale(1.1);
+            }
+            50% {
+                transform: translate(-20px, 20px) scale(1);
+            }
+            75% {
+                transform: translate(20px, 10px) scale(0.95);
+            }
+        }
+
+        /* Tech Grid Background */
+        .tech-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.03;
+            background-image:
+                linear-gradient(rgba(99, 102, 241, 0.3) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 102, 241, 0.3) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { transform: perspective(500px) rotateX(60deg) translateY(0); }
+            100% { transform: perspective(500px) rotateX(60deg) translateY(60px); }
+        }
+
+        /* Flowing Lines */
+        .flow-lines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .flow-line {
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(to bottom,
+                transparent 0%,
+                rgba(99, 102, 241, 0.1) 20%,
+                rgba(99, 102, 241, 0.3) 50%,
+                rgba(99, 102, 241, 0.1) 80%,
+                transparent 100%);
+            animation: flowLine 8s ease-in-out infinite;
+        }
+
+        .flow-line:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 10s; }
+        .flow-line:nth-child(2) { left: 25%; animation-delay: -2s; animation-duration: 12s; }
+        .flow-line:nth-child(3) { left: 40%; animation-delay: -4s; animation-duration: 9s; }
+        .flow-line:nth-child(4) { left: 60%; animation-delay: -1s; animation-duration: 11s; }
+        .flow-line:nth-child(5) { left: 75%; animation-delay: -3s; animation-duration: 13s; }
+        .flow-line:nth-child(6) { left: 90%; animation-delay: -5s; animation-duration: 8s; }
+
+        @keyframes flowLine {
+            0%, 100% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+        }
+
+        /* Constellation Canvas */
+        #constellation-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        /* Gradient Orbs */
+        .gradient-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -2;
+            animation: orbFloat 15s ease-in-out infinite;
+        }
+
+        .gradient-orb-1 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+            animation-delay: 0s;
+        }
+
+        .gradient-orb-2 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.12) 0%, transparent 70%);
+            bottom: -150px;
+            left: -150px;
+            animation-delay: -5s;
+        }
+
+        .gradient-orb-3 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(79, 172, 254, 0.1) 0%, transparent 70%);
+            top: 50%;
+            left: 30%;
+            animation-delay: -10s;
+        }
+
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, -30px) scale(1.05); }
+            50% { transform: translate(-20px, 20px) scale(0.95); }
+            75% { transform: translate(20px, 10px) scale(1.02); }
+        }
+
         /* Navigation */
         .navbar {
             position: fixed;
@@ -886,6 +1274,54 @@
 <body>
     <!-- Animated Background -->
     <div class="bg-animation"></div>
+
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+
+    <!-- Glow Orbs -->
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+
+    <!-- Particles -->
+    <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Constellation Lines -->
+    <div class="constellation">
+        <div class="constellation-line"></div>
+        <div class="constellation-line"></div>
+        <div class="constellation-line"></div>
+        <div class="constellation-line"></div>
+        <div class="constellation-line"></div>
+        <div class="constellation-line"></div>
+    </div>
+
+    <!-- Wave Effect -->
+    <div class="wave-container">
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
 
     <!-- Navigation -->
     <nav class="navbar">
