@@ -10,6 +10,175 @@
     <link rel="manifest" href="/manifest.json"/>
     <title>Diego Alzate | AI Portfolio</title>
 
+    <!-- i18n Configuration -->
+    <script>
+        window.i18n = {
+            es: {
+                // Navbar
+                'nav.projects': '🤖 Proyectos de IA',
+                'nav.navigation': '📍 Navegación',
+                'nav.home': 'Inicio',
+                'nav.projects_menu': 'Proyectos',
+
+                // Hero
+                'hero.badge': 'Disponible para proyectos',
+                'hero.title': 'Diego Alzate',
+                'hero.subtitle': 'Tech Lead & AI Engineer',
+                'hero.description': 'AI Engineer y Tech Lead con experiencia en sistemas de <span class="text-gradient">Generación Aumentada por Recuperación (RAG)</span>, arquitecturas cloud-native en <span class="text-gradient">AWS y GCP</span>, y automatización con <span class="text-gradient">LangChain y LLMs</span>.',
+                'hero.btn_projects': 'Ver Proyectos',
+                'hero.btn_about': 'Sobre Mí',
+                'hero.stat_projects': 'Proyectos IA',
+                'hero.stat_experience': 'Años Exp.',
+                'hero.stat_dedication': 'Dedicación',
+                'hero.scroll': 'Scroll para explorar',
+
+                // About
+                'about.tag': 'Sobre Mí',
+                'about.title': 'Tech Lead con foco en <span class="text-gradient">Inteligencia Artificial</span>',
+                'about.subtitle': 'Construyendo sistemas inteligentes y arquitecturas backend de alto rendimiento',
+                'about.ml.title': 'Machine Learning',
+                'about.ml.desc': 'Modelos predictivos con Python, Scikit-learn y PyTorch. Experiencia en algoritmos supervisados, no supervisados y técnicas de ensemble para resolver problemas reales.',
+                'about.dl.title': 'AI & Automatización',
+                'about.dl.desc': 'Diseño de sistemas RAG con AWS Bedrock y LangChain. Agentes AI con razonamiento multimodal (texto + imagen), prompt engineering y extracción de datos estructurados.',
+                'about.data.title': 'Cloud & Backend',
+                'about.data.desc': 'Arquitecturas backend con Node.js, TypeScript y NestJS. Despliegue en AWS (ECS, Lambda, SQS) y GCP con microservicios, CI/CD y observabilidad.',
+                'about.dev.title': 'Backend Development',
+                'about.dev.desc': 'APIs RESTful y GraphQL con Node.js, TypeScript y NestJS. Autenticación con Keycloak y Auth0. Testing con Jest, CI/CD con GitHub Actions y cobertura de código de alto estándar.',
+
+                // Projects
+                'projects.tag': 'Portfolio',
+                'projects.title': 'Proyectos de <span class="text-gradient">IA</span>',
+                'projects.subtitle': 'Explora mis proyectos en diferentes áreas de la inteligencia artificial',
+                'project.nlp.title': 'Natural Language Processing',
+                'project.nlp.desc': 'Análisis de sentimientos, clasificación de texto y modelos de lenguaje utilizando técnicas avanzadas de NLP.',
+                'project.cv.title': 'Computer Vision',
+                'project.cv.desc': 'Reconocimiento de imágenes, detección de objetos y segmentación visual con redes neuronales convolucionales.',
+                'project.dl.title': 'Deep Learning',
+                'project.dl.desc': 'Redes neuronales profundas, arquitecturas avanzadas y modelos generativos para resolver problemas complejos.',
+                'project.sl.title': 'Supervised Learning',
+                'project.sl.desc': 'Clasificación y regresión con algoritmos clásicos de ML optimizados para rendimiento y precisión.',
+                'project.ul.title': 'Unsupervised Learning',
+                'project.ul.desc': 'Clustering, reducción de dimensionalidad y descubrimiento de patrones ocultos en datos sin etiquetar.',
+                'project.et.title': 'Ensemble Techniques',
+                'project.et.desc': 'Combinación de múltiples modelos para crear predicciones más robustas y precisas.',
+
+                // Contact
+                'contact.title': '¿Listo para tu próximo proyecto de <span class="text-gradient">IA</span>?',
+                'contact.subtitle': 'Trabajemos juntos para llevar tus ideas al siguiente nivel con inteligencia artificial.',
+                'contact.btn': 'Contactar',
+                'contact.cv': 'Descargar CV',
+
+                // Footer
+                'footer.rights': '© 2026 Diego Alzate. Todos los derechos reservados.',
+                'footer.made': 'Hecho con ❤️ y LLMs',
+
+                // Language
+                'lang.es': 'ES',
+                'lang.en': 'EN'
+            },
+            en: {
+                // Navbar
+                'nav.projects': '🤖 AI Projects',
+                'nav.navigation': '📍 Navigation',
+                'nav.home': 'Home',
+                'nav.projects_menu': 'Projects',
+
+                // Hero
+                'hero.badge': 'Available for projects',
+                'hero.title': 'Diego Alzate',
+                'hero.subtitle': 'Tech Lead & AI Engineer',
+                'hero.description': 'AI Engineer and Tech Lead with expertise in <span class="text-gradient">Retrieval-Augmented Generation (RAG)</span> systems, cloud-native architectures on <span class="text-gradient">AWS and GCP</span>, and workflow automation with <span class="text-gradient">LangChain and LLMs</span>.',
+                'hero.btn_projects': 'View Projects',
+                'hero.btn_about': 'About Me',
+                'hero.stat_projects': 'AI Projects',
+                'hero.stat_experience': 'Years Exp.',
+                'hero.stat_dedication': 'Dedication',
+                'hero.scroll': 'Scroll to explore',
+
+                // About
+                'about.tag': 'About Me',
+                'about.title': 'Tech Lead focused on <span class="text-gradient">Artificial Intelligence</span>',
+                'about.subtitle': 'Building intelligent systems and high-performance backend architectures',
+                'about.ml.title': 'Machine Learning',
+                'about.ml.desc': 'Predictive models with Python, Scikit-learn and PyTorch. Experience with supervised, unsupervised algorithms and ensemble techniques to solve real-world problems.',
+                'about.dl.title': 'AI & Automation',
+                'about.dl.desc': 'RAG systems with AWS Bedrock and LangChain. AI agents with multimodal reasoning (text + image), prompt engineering and structured data extraction.',
+                'about.data.title': 'Cloud & Backend',
+                'about.data.desc': 'Backend architectures with Node.js, TypeScript and NestJS. Deployment on AWS (ECS, Lambda, SQS) and GCP with microservices, CI/CD and observability.',
+                'about.dev.title': 'Backend Development',
+                'about.dev.desc': 'RESTful and GraphQL APIs with Node.js, TypeScript and NestJS. Authentication with Keycloak and Auth0. Testing with Jest, CI/CD with GitHub Actions and high-standard code coverage.',
+
+                // Projects
+                'projects.tag': 'Portfolio',
+                'projects.title': '<span class="text-gradient">AI</span> Projects',
+                'projects.subtitle': 'Explore my projects in different areas of artificial intelligence',
+                'project.nlp.title': 'Natural Language Processing',
+                'project.nlp.desc': 'Sentiment analysis, text classification and language models using advanced NLP techniques.',
+                'project.cv.title': 'Computer Vision',
+                'project.cv.desc': 'Image recognition, object detection and visual segmentation with convolutional neural networks.',
+                'project.dl.title': 'Deep Learning',
+                'project.dl.desc': 'Deep neural networks, advanced architectures and generative models to solve complex problems.',
+                'project.sl.title': 'Supervised Learning',
+                'project.sl.desc': 'Classification and regression with classical ML algorithms optimized for performance and accuracy.',
+                'project.ul.title': 'Unsupervised Learning',
+                'project.ul.desc': 'Clustering, dimensionality reduction and discovery of hidden patterns in unlabeled data.',
+                'project.et.title': 'Ensemble Techniques',
+                'project.et.desc': 'Combination of multiple models to create more robust and accurate predictions.',
+
+                // Contact
+                'contact.title': 'Ready for your next <span class="text-gradient">AI</span> project?',
+                'contact.subtitle': "Let's work together to take your ideas to the next level with artificial intelligence.",
+                'contact.btn': 'Contact',
+                'contact.cv': 'Download CV',
+
+                // Footer
+                'footer.rights': '© 2026 Diego Alzate. All rights reserved.',
+                'footer.made': 'Made with ❤️ and LLMs',
+
+                // Language
+                'lang.es': 'ES',
+                'lang.en': 'EN'
+            }
+        };
+
+        // Get saved language or default to Spanish
+        window.currentLang = localStorage.getItem('preferred-lang') || 'es';
+
+        // Translation function
+        window.t = function(key) {
+            return window.i18n[window.currentLang][key] || key;
+        };
+
+        // Update all translations
+        window.updateTranslations = function() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const translation = window.t(key);
+                if (translation) {
+                    if (el.hasAttribute('data-i18n-html')) {
+                        el.innerHTML = translation;
+                    } else {
+                        el.textContent = translation;
+                    }
+                }
+            });
+
+            // Update language selector
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-lang') === window.currentLang);
+            });
+        };
+
+        // Set language
+        window.setLanguage = function(lang) {
+            if (window.i18n[lang]) {
+                window.currentLang = lang;
+                localStorage.setItem('preferred-lang', lang);
+                window.updateTranslations();
+            }
+        };
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -484,6 +653,44 @@
             background-clip: text;
             text-decoration: none;
             animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        /* Language Selector */
+        .lang-selector {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-right: 1rem;
+        }
+
+        .lang-btn {
+            padding: 0.35rem 0.75rem;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .lang-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--text-primary);
+        }
+
+        .lang-btn.active {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+
+        .lang-divider {
+            width: 1px;
+            height: 16px;
+            background: var(--border-color);
         }
 
         @keyframes glow {
@@ -1214,6 +1421,45 @@
             background-clip: text;
         }
 
+        /* Language Selector */
+        .lang-selector {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-right: 1rem;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 0.75rem;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .lang-btn:hover {
+            background: var(--bg-card);
+            border-color: var(--primary-color);
+            color: var(--text-primary);
+        }
+
+        .lang-btn.active {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+
+        .lang-divider {
+            width: 1px;
+            height: 20px;
+            background: var(--border-color);
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .navbar {
@@ -1327,17 +1573,23 @@
     <nav class="navbar">
         <div class="navbar-content">
             <a href="/" class="logo">Diego Alzate</a>
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div style="display: flex; align-items: center;">
+                <div class="lang-selector">
+                    <button class="lang-btn active" data-lang="es" onclick="setLanguage('es')" aria-label="Español">ES</button>
+                    <button class="lang-btn" data-lang="en" onclick="setLanguage('en')" aria-label="English">EN</button>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Navigation Menu -->
     <div class="nav-menu" id="navMenu">
-        <h3>🤖 Proyectos de IA</h3>
+        <h3 data-i18n="nav.projects">🤖 Proyectos de IA</h3>
         <ul class="nav-links">
             <li><a href="projects/NLP.html">Natural Language Processing</a></li>
             <li><a href="projects/ComputerVision.html">Computer Vision</a></li>
@@ -1347,10 +1599,10 @@
             <li><a href="projects/EnsembleTechniques.html">Ensemble Techniques</a></li>
         </ul>
 
-        <h3 style="margin-top: 2rem;">📍 Navegación</h3>
+        <h3 style="margin-top: 2rem;" data-i18n="nav.navigation">📍 Navegación</h3>
         <ul class="nav-links">
-            <li><a href="/">Inicio</a></li>
-            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="/" data-i18n="nav.home">Inicio</a></li>
+            <li><a href="#projects" data-i18n="nav.projects_menu">Proyectos</a></li>
         </ul>
     </div>
 
@@ -1369,41 +1621,41 @@
             <div class="hero-content">
                 <div class="hero-badge">
                     <span class="badge-dot"></span>
-                    Disponible para proyectos
+                    <span data-i18n="hero.badge">Disponible para proyectos</span>
                 </div>
                 <h1>Diego Alzate</h1>
-                <p class="hero-subtitle">AI & Machine Learning Engineer</p>
-                <p class="hero-description">
-                    Desarrollo soluciones inteligentes utilizando técnicas avanzadas de
-                    <span class="text-gradient">Machine Learning</span>,
-                    <span class="text-gradient">Deep Learning</span> y
-                    <span class="text-gradient">Procesamiento de Lenguaje Natural</span>.
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Tech Lead & AI Engineer</p>
+                <p class="hero-description" data-i18n="hero.description" data-i18n-html>
+                    AI Engineer y Tech Lead con experiencia en sistemas de
+                    <span class="text-gradient">Generación Aumentada por Recuperación (RAG)</span>,
+                    arquitecturas cloud-native en <span class="text-gradient">AWS y GCP</span>,
+                    y automatización con <span class="text-gradient">LangChain y LLMs</span>.
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">
-                        Ver Proyectos
+                        <span data-i18n="hero.btn_projects">Ver Proyectos</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M7 17L17 7M17 7H7M17 7V17"/>
                         </svg>
                     </a>
-                    <a href="#about" class="btn btn-secondary">
+                    <a href="#about" class="btn btn-secondary" data-i18n="hero.btn_about">
                         Sobre Mí
                     </a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-number">6+</span>
-                        <span class="stat-label">Proyectos IA</span>
+                        <span class="stat-label" data-i18n="hero.stat_projects">Proyectos IA</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
-                        <span class="stat-number">3+</span>
-                        <span class="stat-label">Años Exp.</span>
+                        <span class="stat-number">7+</span>
+                        <span class="stat-label" data-i18n="hero.stat_experience">Años Exp.</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
                         <span class="stat-number">100%</span>
-                        <span class="stat-label">Dedicación</span>
+                        <span class="stat-label" data-i18n="hero.stat_dedication">Dedicación</span>
                     </div>
                 </div>
             </div>
@@ -1411,7 +1663,7 @@
                 <div class="mouse">
                     <div class="wheel"></div>
                 </div>
-                <span>Scroll para explorar</span>
+                <span data-i18n="hero.scroll">Scroll para explorar</span>
             </div>
         </section>
 
@@ -1419,30 +1671,30 @@
         <section class="about-section" id="about">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Sobre Mí</span>
-                    <h2>Apasionado por la <span class="text-gradient">Inteligencia Artificial</span></h2>
-                    <p>Transformando datos en soluciones inteligentes</p>
+                    <span class="section-tag" data-i18n="about.tag">Sobre Mí</span>
+                    <h2 data-i18n="about.title" data-i18n-html>Tech Lead con foco en <span class="text-gradient">Inteligencia Artificial</span></h2>
+                    <p data-i18n="about.subtitle">Construyendo sistemas inteligentes y arquitecturas backend de alto rendimiento</p>
                 </div>
                 <div class="about-content">
                     <div class="about-card">
                         <div class="about-icon">🧠</div>
-                        <h3>Machine Learning</h3>
-                        <p>Desarrollo de modelos predictivos y sistemas de aprendizaje automático utilizando algoritmos supervisados y no supervisados.</p>
+                        <h3 data-i18n="about.ml.title">Machine Learning</h3>
+                        <p data-i18n="about.ml.desc">Modelos predictivos con Python, Scikit-learn y PyTorch. Experiencia en algoritmos supervisados, no supervisados y técnicas de ensemble para resolver problemas reales.</p>
                     </div>
                     <div class="about-card">
                         <div class="about-icon">🤖</div>
-                        <h3>Deep Learning</h3>
-                        <p>Implementación de redes neuronales profundas para visión por computadora, NLP y sistemas de recomendación.</p>
+                        <h3 data-i18n="about.dl.title">AI & Automatización</h3>
+                        <p data-i18n="about.dl.desc">Diseño de sistemas RAG con AWS Bedrock y LangChain. Agentes AI con razonamiento multimodal (texto + imagen), prompt engineering y extracción de datos estructurados.</p>
                     </div>
                     <div class="about-card">
-                        <div class="about-icon">📊</div>
-                        <h3>Análisis de Datos</h3>
-                        <p>Extracción de insights valiosos mediante análisis estadístico y visualización de datos complejos.</p>
+                        <div class="about-icon">☁️</div>
+                        <h3 data-i18n="about.data.title">Cloud & Backend</h3>
+                        <p data-i18n="about.data.desc">Arquitecturas backend con Node.js, TypeScript y NestJS. Despliegue en AWS (ECS, Lambda, SQS) y GCP con microservicios, CI/CD y observabilidad.</p>
                     </div>
                     <div class="about-card">
                         <div class="about-icon">🔧</div>
-                        <h3>Desarrollo</h3>
-                        <p>Creación de aplicaciones robustas con Python, TensorFlow, PyTorch y frameworks modernos de ML.</p>
+                        <h3 data-i18n="about.dev.title">Backend Development</h3>
+                        <p data-i18n="about.dev.desc">APIs RESTful y GraphQL con Node.js, TypeScript y NestJS. Autenticación con Keycloak y Auth0. Testing con Jest, CI/CD con GitHub Actions y cobertura de código de alto estándar.</p>
                     </div>
                 </div>
             </div>
@@ -1452,16 +1704,16 @@
         <section class="projects-section" id="projects">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Portfolio</span>
-                    <h2>Proyectos de <span class="text-gradient">IA</span></h2>
-                    <p>Explora mis proyectos en diferentes áreas de la inteligencia artificial</p>
+                    <span class="section-tag" data-i18n="projects.tag">Portfolio</span>
+                    <h2 data-i18n="projects.title" data-i18n-html>Proyectos de <span class="text-gradient">IA</span></h2>
+                    <p data-i18n="projects.subtitle">Explora mis proyectos en diferentes áreas de la inteligencia artificial</p>
                 </div>
                 <div class="projects-grid">
                     <a href="projects/NLP.html" class="project-card" data-category="nlp">
                         <div class="project-glow"></div>
                         <div class="project-icon">💬</div>
-                        <h3>Natural Language Processing</h3>
-                        <p>Análisis de sentimientos, clasificación de texto y modelos de lenguaje utilizando técnicas avanzadas de NLP.</p>
+                        <h3 data-i18n="project.nlp.title">Natural Language Processing</h3>
+                        <p data-i18n="project.nlp.desc">Análisis de sentimientos, clasificación de texto y modelos de lenguaje utilizando técnicas avanzadas de NLP.</p>
                         <div class="project-tags">
                             <span class="tag">NLP</span>
                             <span class="tag">Transformers</span>
@@ -1472,8 +1724,8 @@
                     <a href="projects/ComputerVision.html" class="project-card" data-category="vision">
                         <div class="project-glow"></div>
                         <div class="project-icon">👁️</div>
-                        <h3>Computer Vision</h3>
-                        <p>Reconocimiento de imágenes, detección de objetos y segmentación visual con redes neuronales convolucionales.</p>
+                        <h3 data-i18n="project.cv.title">Computer Vision</h3>
+                        <p data-i18n="project.cv.desc">Reconocimiento de imágenes, detección de objetos y segmentación visual con redes neuronales convolucionales.</p>
                         <div class="project-tags">
                             <span class="tag">CNN</span>
                             <span class="tag">OpenCV</span>
@@ -1484,8 +1736,8 @@
                     <a href="projects/DeepLearning.html" class="project-card" data-category="deep">
                         <div class="project-glow"></div>
                         <div class="project-icon">🧬</div>
-                        <h3>Deep Learning</h3>
-                        <p>Redes neuronales profundas, arquitecturas avanzadas y modelos generativos para resolver problemas complejos.</p>
+                        <h3 data-i18n="project.dl.title">Deep Learning</h3>
+                        <p data-i18n="project.dl.desc">Redes neuronales profundas, arquitecturas avanzadas y modelos generativos para resolver problemas complejos.</p>
                         <div class="project-tags">
                             <span class="tag">TensorFlow</span>
                             <span class="tag">PyTorch</span>
@@ -1496,8 +1748,8 @@
                     <a href="projects/SupervisedLearning.html" class="project-card" data-category="supervised">
                         <div class="project-glow"></div>
                         <div class="project-icon">📈</div>
-                        <h3>Supervised Learning</h3>
-                        <p>Clasificación y regresión con algoritmos clásicos de ML optimizados para rendimiento y precisión.</p>
+                        <h3 data-i18n="project.sl.title">Supervised Learning</h3>
+                        <p data-i18n="project.sl.desc">Clasificación y regresión con algoritmos clásicos de ML optimizados para rendimiento y precisión.</p>
                         <div class="project-tags">
                             <span class="tag">Scikit-learn</span>
                             <span class="tag">XGBoost</span>
@@ -1508,8 +1760,8 @@
                     <a href="projects/UnsupervisedLearning.html" class="project-card" data-category="unsupervised">
                         <div class="project-glow"></div>
                         <div class="project-icon">🎯</div>
-                        <h3>Unsupervised Learning</h3>
-                        <p>Clustering, reducción de dimensionalidad y descubrimiento de patrones ocultos en datos sin etiquetar.</p>
+                        <h3 data-i18n="project.ul.title">Unsupervised Learning</h3>
+                        <p data-i18n="project.ul.desc">Clustering, reducción de dimensionalidad y descubrimiento de patrones ocultos en datos sin etiquetar.</p>
                         <div class="project-tags">
                             <span class="tag">K-Means</span>
                             <span class="tag">PCA</span>
@@ -1520,8 +1772,8 @@
                     <a href="projects/EnsembleTechniques.html" class="project-card" data-category="ensemble">
                         <div class="project-glow"></div>
                         <div class="project-icon">🎲</div>
-                        <h3>Ensemble Techniques</h3>
-                        <p>Combinación de múltiples modelos para crear predicciones más robustas y precisas.</p>
+                        <h3 data-i18n="project.et.title">Ensemble Techniques</h3>
+                        <p data-i18n="project.et.desc">Combinación de múltiples modelos para crear predicciones más robustas y precisas.</p>
                         <div class="project-tags">
                             <span class="tag">Voting</span>
                             <span class="tag">Bagging</span>
@@ -1537,11 +1789,11 @@
         <section class="contact-section" id="contact">
             <div class="container">
                 <div class="contact-content">
-                    <h2>¿Listo para tu próximo proyecto de <span class="text-gradient">IA</span>?</h2>
-                    <p>Trabajemos juntos para llevar tus ideas al siguiente nivel con inteligencia artificial.</p>
+                    <h2 data-i18n="contact.title" data-i18n-html>¿Listo para tu próximo proyecto de <span class="text-gradient">IA</span>?</h2>
+                    <p data-i18n="contact.subtitle">Trabajemos juntos para llevar tus ideas al siguiente nivel con inteligencia artificial.</p>
                     <div class="contact-buttons">
                         <a href="mailto:diegoff@gmail.com" class="btn btn-primary">
-                            Contactar
+                            <span data-i18n="contact.btn">Contactar</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
                             </svg>
@@ -1555,8 +1807,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>© 2024 Diego Alzate. Todos los derechos reservados.</p>
-            <p class="footer-tech">Hecho con ❤️ y Machine Learning</p>
+            <p data-i18n="footer.rights">© 2025 Diego Alzate. Todos los derechos reservados.</p>
+            <p class="footer-tech" data-i18n="footer.made">Hecho con ❤️ y LLM</p>
         </div>
     </footer>
 
@@ -1570,6 +1822,9 @@
     <!-- Menu Interaction Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Apply saved language preference on load
+            window.updateTranslations();
+
             const menuToggle = document.getElementById('menuToggle');
             const navMenu = document.getElementById('navMenu');
             const overlay = document.getElementById('overlay');
